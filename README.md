@@ -184,4 +184,8 @@ Uboot: reading press button state again
 Press Esc to stop autoboot:  0
 ```
 my blind trust to the more "good looking" nand betrayed me so hard...  
-thats it! hopefully this will help someone or me in future. who knows?
+thats it! hopefully this will help someone or me in future. who knows?  
+files:
+- 16m.bin: sliced from the full backup, should boot u boot just fine(at 13mb or smt idr)
+- 16m_p.bin: after adding oob with the tool, use this to flash onto nand with -d flag
+- gd_chk.bin, mx_chk.bin: show how bad the bit flips was and demontrate my blind trust+bias
