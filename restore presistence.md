@@ -33,5 +33,11 @@ tftpboot 0x44000000 rootfs_u.ubi
 nand erase 0x05D00000 ${filesize}
 nand write 0x44000000 0x05D00000 ${filesize}
 ```
-ik size 0x04000000 is excessive but works
-imma test stuffs rq
+ik size 0x04000000 is excessive but works  
+wait wtf???? i flashed the patched ubi succesfully, it mounted fine but presistence is still dead???  
+```
+/dev/ubi0_4 on /overlay type ubifs (rw,noatime,assert=read-only,ubi=0,vol=4)
+overlayfs:/overlay on / type overlay (rw,noatime,lowerdir=/,upperdir=/overlay/upper,workdir=/overlay/work)
+```
+
+
