@@ -38,7 +38,7 @@ exit
 thats it, password is md5((fw_printenv("eth1addr").replace(":", "") + "FTEL")  
 and yeah, thats a hash  
 do note that fsr my 5.whatever firmware uses AeiAdminPwd while the newer 10.alsowhatever use whatever the thing i just said  
-this is probably because of the ssd check in /rom/etc/init.d/authsystem:  
+this is probably because of the ssh check in /rom/etc/init.d/authsystem:  
 ```
     if [ "${AEI_SSH_ENABLED}" == "0" ]; then
         AEI_ADMIN_PWD=`fw_printenv  | grep AeiAdminPwd | cut -d '=' -f 2`
