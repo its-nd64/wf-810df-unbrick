@@ -18,7 +18,7 @@ do_mount_root() {
 
 [ "$INITRAMFS" = "1" ] || boot_hook_add preinit_main do_mount_root
 ```
-notice the ticket number and mount_root ram?  
+notice the ticket number(i think) and mount_root ram?  
 thats why persist is dead, its intentional by aei!!!!  
 they instead store it in an archive in rootfs_data iirc, there are many configs there but things like passwd dont stick  
 after LOTS of trial and errors and arguments with claude, i found out how to pack squashfs to ubi, itb, etc etc 2 days of work is a lot so idr much
