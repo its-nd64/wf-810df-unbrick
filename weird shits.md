@@ -54,3 +54,14 @@ this is probably because of the ssh check in /rom/etc/init.d/authsystem:
     fi
 ```
 if AEI_SSH_ENABLED is "false"(wtf is "0") then it use AeiAdminPwd, if not then from the above  
+i found something interesting  
+at /usr/sbin/oui:  
+```
+set_ssh_password = {
+    ...
+    if msg.password ~= nil and string.len(msg.password) <= 64 then
+        os.execute("echo -e \"" .. msg.password .. "\n" .. msg.password .. "\" | passwd root")
+    end
+end, {password = libubus.STRING}
+```
+whatever, another pathway ig  
